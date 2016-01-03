@@ -1,3 +1,4 @@
 baseurl = "http://yoshiharuyamashita.com"
 languageCode = "en-us"
+theme = "purehugo"
 title = "My New Hugo Site"
