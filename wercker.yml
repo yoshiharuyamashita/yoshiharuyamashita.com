@@ -3,7 +3,7 @@ build:
   steps:
     - arjen/hugo-build:
         version: "0.15"
-        theme: herring-cove
+        theme: purehugo
         flags: --buildDrafts=true
 deploy:
   steps:
