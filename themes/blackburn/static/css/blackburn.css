@@ -1,0 +1,41 @@
+.header {
+  font-family: "Raleway", Helvetica, Arial, sans-serif
+}
+
+a {
+  color: #3b8bba;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+a:visited {
+  color: #265778;
+}
+
+.small-print {
+  font-size: 0.8em;
+  margin: 0.6em;
+}
+
+.post-meta {
+  margin: 1em 0;
+  font-size: 90%;
+}
+
+article > footer {
+  text-align: right;
+}
+
+.pagination {
+  margin-top: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.social {
+  font-size: 0.8em;
+}

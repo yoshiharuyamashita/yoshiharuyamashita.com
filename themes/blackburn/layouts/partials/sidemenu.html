@@ -1,0 +1,29 @@
+<!-- Menu toggle -->
+<a href="#menu" id="menuLink" class="menu-link">
+  <!-- Hamburger icon -->
+  <span></span>
+</a>
+<div id="menu">
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item">
+        <a class="pure-menu-link" href="/">Home</a>
+      </li>
+      <li class="pure-menu-item">
+        <a class="pure-menu-link" href="/post">Posts</a>
+      </li>
+
+      {{ range .Site.Pages.ByWeight }}
+      {{ if isset .Params "sidemenu" }}
+      <li class="pure-menu-item">
+        <a class="pure-menu-link" href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+      {{ end }}
+      {{ end }}
+    </ul>
+  </div>
+
+  {{ partial "social.html" . }}
+
+  {{ partial "copyright.html" . }}
+</div>

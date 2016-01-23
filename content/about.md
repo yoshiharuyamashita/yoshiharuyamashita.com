@@ -2,7 +2,7 @@
 date = "2016-01-03T13:12:48Z"
 draft = false
 title = "About"
-
+sidemenu = "true"
 +++
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere pulvinar nulla, vel feugiat arcu lacinia et. Cras semper condimentum magna, id porta neque fermentum at. Proin nec luctus diam, ut commodo ante. Ut mattis tellus lectus, sit amet hendrerit turpis tincidunt ut. In consequat mauris ac velit interdum, eu scelerisque dolor placerat. Donec lobortis tortor ac tellus consectetur mattis. Praesent vel lectus et nulla commodo maximus.
