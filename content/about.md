@@ -5,6 +5,22 @@ title = "About"
 sidemenu = "true"
 +++
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere pulvinar nulla, vel feugiat arcu lacinia et. Cras semper condimentum magna, id porta neque fermentum at. Proin nec luctus diam, ut commodo ante. Ut mattis tellus lectus, sit amet hendrerit turpis tincidunt ut. In consequat mauris ac velit interdum, eu scelerisque dolor placerat. Donec lobortis tortor ac tellus consectetur mattis. Praesent vel lectus et nulla commodo maximus.
+## About me
 
-Etiam id ligula aliquam, ornare ex ac, egestas augue. Integer posuere, risus gravida semper auctor, neque ex fringilla tellus, sed rutrum dolor ante feugiat orci. Fusce iaculis nisi leo, ut commodo felis luctus eu. Sed auctor lectus vitae urna congue vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae pharetra massa, dictum euismod diam. Curabitur urna leo, vestibulum in orci in, gravida finibus eros. Maecenas tristique scelerisque elit, a auctor mi commodo id. In auctor dictum elit nec mollis. Nunc placerat at velit at elementum. Suspendisse ultricies non velit id aliquam.
+I'm originally from Japan but came to England to study all those years ago. I've been in this country for almost 15 years. Time flies! I ended up in Bristol because of my first job.
+
+### Software Engineer
+
+That's my main job. I work on software tools to automatically check and correct video/audio problems in file-based media. In my role, I mainly code in C++ but I often get to use C#, JavaScript and Python as well, which I like. 
+
+### Freelance Translator
+
+Not so frequently these days but I also carry out English to Japanese translations and proofreading when asked (mainly computing related stuff, including GUIs, user guides etc). It's good to combine my language skills with computing.
+
+### Wannabe Freestyle Footballer
+
+I keep a football in my office and practice at lunch time. My current favourite place to practice is the alley at the back of my office off which there are several pubs. The surface is uneven and made of cobbles but I like it there because it's very quiet at lunch time.
+
+## About this site
+
+TODO
