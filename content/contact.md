@@ -8,7 +8,7 @@ description = "Sumpserat annis reditusque in rudis propioris meritis"
 ## Capitum inter dare habent Clymene
 
 Lorem markdownum quatenus, stuppea commisit *nullos* verbaque,
-[nec](http://seenly.com/). Oscula quem vellet Phlegethontide stolidas sub classe
+[nec](http://seenly.com/). Oscula quem vellet Phlegethontide tolidas sub classe
 **telis coryli** caperet multa praesignia cursu. Vivunt ad perque, quas tracti
 fretum. Virentibus manus amor, nec haec enim corpora iamque. *Ipse* apertum
 quoque, Lydos confecta **inpune** credit undas conclamat luctus velle, quid
