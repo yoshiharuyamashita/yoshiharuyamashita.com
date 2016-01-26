@@ -1,4 +1,4 @@
-box: debian
+box: wercker/default
 build:
   steps:
     - arjen/hugo-build:
