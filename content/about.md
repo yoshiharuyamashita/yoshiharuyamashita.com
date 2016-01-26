@@ -23,4 +23,4 @@ I keep a football in my office and practice at lunch time. My current favourite 
 
 ## About this site
 
-This site is powered by [Hugo](//gohugo.io) and is hosted from my GitHub repository.
+This site is generated using [Hugo](//gohugo.io) and is hosted from my GitHub [repository](//github.com/yoshiharuyamashita/yoshiharuyamashita.com). The layout originally comes from Yahoo's Pure CSS site [here](//purecss.io/layouts/side-menu/). I've modified it so that it can be used with Hugo. Icons are from [Font Awesome](//fontawesome.io/) and fonts from [Google Fonts](//www.google.com/fonts).
