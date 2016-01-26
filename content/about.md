@@ -23,4 +23,4 @@ I keep a football in my office and practice at lunch time. My current favourite 
 
 ## About this site
 
-TODO
+This site is powered by [Hugo](//gohugo.io) and is hosted from my GitHub repository.
