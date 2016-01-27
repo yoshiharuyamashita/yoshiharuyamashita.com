@@ -14,6 +14,7 @@ paginate = 10
 [params]
   # Shown in the home page
   subtitle = "Software Engineer / Freelance Translator / Wannabe Freestyle Footballer"
+  brand = "Yoshiharu<br>Yamashita"
   github = "yoshiharuyamashita"
   googleAnalytics = "UA-72514969-1"
   # CSS name for highlight.js
