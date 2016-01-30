@@ -20,40 +20,19 @@ a:visited {
 }
 
 .post-meta {
-  margin: 1em 0;
   font-size: 90%;
-}
-
-.post-meta a {
-  margin: 0 0.1em;
-  padding: 0.3em 1em;
-  color: #fff;
-  font-size: 80%;
-  text-decoration: none;
-}
-
-a.post-taxonomy-topic {
-  background: #f37b1d;
-}
-
-a.post-taxonomy-tag {
-  background: #5aba59;
 }
 
 article > footer {
   text-align: right;
 }
 
-.pagination {
+.prev-next-post {
   margin-top: 2em;
   padding-top: 2em;
   padding-bottom: 2em;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
-}
-
-.social {
-  font-size: 0.8em;
 }
 
 #menu .brand {
@@ -65,4 +44,13 @@ article > footer {
   background: transparent;
   text-decoration: none;
   margin: 0.5em 0;
+}
+
+#menu .pure-menu {
+  font-size: 0.9em;
+}
+
+i {
+  display: inline-block;
+  margin-right: 0.2em;
 }
