@@ -69,6 +69,6 @@ Googling for a solution, I found out the error was something to do with bad pack
  
  I was able to fix this problem by clearing **$WERCKER_CACHE_DIR**. In Wercker it's under **Application Settings** -> **Options** as shown below:
  
-![Wercker clear cache button](/img/post/wercker-clear-cache.png "Wercker Application Settings")
+{{% fluid_img "/img/post/wercker-clear-cache.png" %}}
 
 I hope this helps!
