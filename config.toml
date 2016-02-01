@@ -16,6 +16,7 @@ paginate = 10
   subtitle = "Software Engineer / Freelance Translator / Wannabe Freestyle Footballer"
   brand = "Yoshiharu<br>Yamashita"
   googleAnalytics = "UA-72514969-1"
+  disqus = "yoshiharuyamashita"
   # CSS name for highlight.js
   highlightjs = "androidstudio"
   dateFormat = "02 Jan 2006, 15:04"
