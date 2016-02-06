@@ -2,7 +2,7 @@
 date = "2016-01-23T22:43:03Z"
 description = "A clear and responsive theme for Hugo"
 draft = false
-tags = ["hugo"]
+tags = ["Hugo"]
 title = "Introducing Blackburn"
 topics = ["Project"]
 

@@ -4,7 +4,7 @@ description = ""
 draft = false
 tags = []
 title = "Stop 0x0000007B Error on Booting Windows 7"
-topics = []
+topics = ["Work"]
 
 +++
 
