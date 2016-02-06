@@ -41,6 +41,18 @@ paginate = 10
     weight = 2
     identifier = "post"
     url = "/post/"
+  [[menu.main]]
+    name = "Topics"
+    pre = "<i class='fa fa-folder fa-fw'></i>"
+    weight = 3
+    identifier = "topic"
+    url = "/topics/"
+  [[menu.main]]
+    name = "Tags"
+    pre = "<i class='fa fa-tags fa-fw'></i>"
+    weight = 4
+    identifier = "tag"
+    url = "/tags/"
 
 [social]
   # Link your social networking accouns to the side menu
