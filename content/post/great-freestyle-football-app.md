@@ -14,6 +14,8 @@ topics = ["フリースタイルフットボール"]
 
 そんな中、なかなか使えるアプリを最近発見してお世話になっているのでここで紹介。
 
+<!--more-->
+
 {{% fluid_img "/img/post/trickstar5-freestyle-football-app.png" %}}
 
 詳細とダウンロードは[こちら](http://videobook.jp/trickstar5/)から。
