@@ -28,3 +28,7 @@ topics = ["フリースタイルフットボール"]
 - 説明は日本語のみだけど、ほかの言語にも対応したら受けるんじゃないかな。
 
 このアプリに登場している TRICkSTAR5 の YouTube [チャンネル](https://www.youtube.com/user/TRICkSTAR5)も練習の助けになります。
+
+でも個人的にはカテゴリ、難易度別に分類されている下のサイトがお勧め。
+
+» [サッカー＆リフティング、短期間で上手くなりたい人へ - Creative-football 日本一のサッカーハウツーサイト](http://creative-football.jimdo.com/)
