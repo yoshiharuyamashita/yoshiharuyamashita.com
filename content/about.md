@@ -7,15 +7,25 @@ sidemenu = "true"
 
 ## About me
 
-I'm originally from Japan but came to England to study all those years ago. I've been in this country for almost 15 years. Time flies! I ended up in Bristol because of my first job.
+Hello!
+
+My name is Yoshiharu Yamashita, Yoshi for short.
+
+I'm originally from Japan but came to England to study all those years ago. I've been in this country for almost 15 years. Time flies! I ended up in Bristol, UK because of my first job.
 
 ### Software Engineer
 
-That's my main job. I work on software tools to automatically check and correct video/audio problems in file-based media. In my role, I mainly code in C++ but I often get to use C#, JavaScript and Python as well, which I like. 
+That's my main job. I currently work on software tools to automatically check and correct video/audio problems in file-based media. In my role, I mainly code in C++ but I often get to use C#, JavaScript and Python as well, which I like.
 
 ### Freelance Translator
 
-Not so frequently these days but I also carry out English to Japanese translations and proofreading when asked (mainly computing related stuff, including GUIs, user guides etc). It's good to combine my language skills with computing.
+I also carry out English to Japanese translations and proofreading for computer related areas, including
+
+- GUIs
+- Technical user guides, website contents
+- Voice over for video tutorials
+
+It's good to combine my language skills with computing.
 
 ### Wannabe Freestyle Footballer
 
@@ -23,4 +33,8 @@ I keep a football in my office and practice at lunch time. My current favourite 
 
 ## About this site
 
-This site is generated using [Hugo](//gohugo.io) and is hosted from my GitHub [repository](//github.com/yoshiharuyamashita/yoshiharuyamashita.com). The layout originally comes from Yahoo's Pure CSS site [here](//purecss.io/layouts/side-menu/). I've modified it so that it can be used with Hugo. Icons are from [Font Awesome](//fontawesome.io/) and fonts from [Google Fonts](//www.google.com/fonts).
+- Generated using [Hugo](//gohugo.io), a fast and modern static website engine
+- Hosted from my GitHub [repository](//github.com/yoshiharuyamashita/yoshiharuyamashita.com)
+- Theme is based on Yahoo's Pure CSS layout [here](//purecss.io/layouts/side-menu/) (I've modified it so that it can be used with Hugo)
+- Icons are from [Font Awesome](//fontawesome.io/)
+- Fonts from [Google Fonts](//www.google.com/fonts)
