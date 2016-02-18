@@ -10,6 +10,8 @@ topics = ["Freestyle Football"]
 
 In this post I'm going to build a list of silky freestyle football tricks I'd like to master one day.
 
+<!--more-->
+
 ## Flick Up Tricks
 
 It looks easy but quite tricky:
