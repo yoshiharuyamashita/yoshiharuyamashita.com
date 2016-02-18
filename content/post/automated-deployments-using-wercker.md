@@ -2,9 +2,9 @@
 date = "2016-01-31T17:42:03Z"
 description = ""
 draft = false
-tags = ["Wercker"]
+tags = ["hugo", "wercker"]
 title = "Automated Deployments using Wercker"
-topics = ["Hugo"]
+topics = ["Techy Stuff"]
 
 +++
 

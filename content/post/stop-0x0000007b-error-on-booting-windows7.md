@@ -2,9 +2,9 @@
 date = "2016-02-02T22:00:02Z"
 description = ""
 draft = false
-tags = []
+tags = ["windows 10 upgrade"]
 title = "Stop 0x0000007B Error on Booting Windows 7"
-topics = ["Work"]
+topics = ["Techy Stuff"]
 
 +++
 
