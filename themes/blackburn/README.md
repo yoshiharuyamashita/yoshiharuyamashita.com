@@ -1,21 +1,37 @@
 # Blackburn
 
-Blackburn is a clear and responsive theme for [Hugo](//gohugo.io). You can see it in action on my personal website [here](//yoshiharuyamashita.com/).
+Blackburn is a clear and responsive theme for [Hugo](//gohugo.io).
 
 ## Overview
 
-* Based on Yahoo's [Pure CSS] (//purecss.io/)
+* Based on Yahoo's [Pure CSS] (http://purecss.io/)
 * Fixed sidebar with social links:
   * Twitter
   * Facebook
+  * Google+
+  * Weibo
   * Instagram
-  * GitHub
-  * Stack Overflow
+  * Flickr
+  * Pinterest
+  * YouTube
+  * Vimeo
+  * Vine
+  * SlideShare
   * LinkedIn
+  * Xing
+  * Reddit
+  * GitHub
+  * Bitbucket
+  * Stack Overflow
 * Client-side syntax highlighting by [Highlight.js](//highlightjs.org)
 * Web analytics by Google Analytics
 * Comments by Disqus
 * Icons by Font Awesome
+
+## Demo
+
+* [Demo](http://themes.gohugo.io/theme/blackburn/)
+* You can also see it in action on my personal website [here](http://yoshiharuyamashita.com/)
 
 ## Screenshots
 
@@ -60,6 +76,7 @@ paginate = 10
   disqus = "Your Disqus shortname"
   # CSS name for highlight.js
   highlightjs = "androidstudio"
+  dateFormat = "02 Jan 2006, 15:04"
 
 [menu]
   # Shown in the side menu.
@@ -90,12 +107,33 @@ paginate = 10
 [social]
   # Link your social networking accouns to the side menu
   # by entering your username or ID.
+  
+  # SNS microblogging
   twitter = "*"
   facebook = "*"
+  googleplus = "*"
+  weibo = "*"
+  
+  # SNS photo/video sharing
   instagram = "*"
-  github = "yoshiharuyamashita"
-  stackoverflow = "*"
+  flickr = "*"
+  pinterest = "*"
+  youtube = "*"
+  vimeo = "*"
+  vine = "*"
+  slideshare = "*"
+  
+  # SNS career oriented
   linkedin = "*"
+  xing = "*"
+  
+  # SNS news
+  reddit = "*"
+  
+  # Techie
+  github = "yoshiharuyamashita"
+  bitbucket = "*"
+  stackoverflow = "*"
 ```
 
 ## Usage
