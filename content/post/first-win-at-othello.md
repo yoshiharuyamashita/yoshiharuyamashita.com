@@ -14,7 +14,7 @@ I finally managed to beat my friend on Othello :-)
 
 <!--more-->
 
-{{% fluid_img "/img/post/othello.jpg" %}}
+{{% fluid_img_ex src="/img/post/othello.jpg" alt="test" class="pure-u-1 pure-u-md-3-4" %}}
 
 BUT we had another game in which he completly destroyed me, taking all four corners!
 
