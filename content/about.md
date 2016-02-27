@@ -11,7 +11,7 @@ Hello!
 
 My name is Yoshiharu Yamashita, Yoshi for short.
 
-I'm originally from Japan but came to England to study all those years ago. I've been in this country for almost 15 years. Time flies! I ended up in Bristol, UK because of my first job.
+I'm originally from Japan but came to England to study in 2001. After graduating I came to Bristol, UK for my first job.
 
 ### Software Engineer
 
