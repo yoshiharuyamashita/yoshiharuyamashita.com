@@ -3,14 +3,14 @@ date = "2016-02-21T14:20:10Z"
 description = ""
 draft = false
 tags = []
-title = "First Win on Othello"
+title = "First Win at Othello"
 topics = []
 
 +++
 
 Yesterday was a memorable day.
 
-I finally managed to beat my friend on Othello :-)
+I finally managed to beat my friend at Othello :-)
 
 <!--more-->
 
