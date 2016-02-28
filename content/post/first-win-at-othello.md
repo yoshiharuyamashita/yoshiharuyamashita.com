@@ -2,9 +2,9 @@
 date = "2016-02-21T14:20:10Z"
 description = ""
 draft = false
-tags = []
+tags = ["othello", "reversi"]
 title = "First Win at Othello"
-topics = []
+topics = ["Board Game"]
 
 +++
 
