@@ -1,10 +1,10 @@
 +++
 date = "2016-03-05T22:45:51Z"
-description = "行かなきゃ損"
+description = "歴史的な建物に囲まれて"
 draft = false
-tags = ["ブリストル", "ブリストル観光", "ブリストルのパブ", "週末"]
-title = "キングストリート、ブリストル"
-topics = ["英国ブリストル生活"]
+tags = ["イギリス", "ブリストル", "ブリストル観光", "ブリストルのパブ", "週末"]
+title = "ブリストルのキングストリートではしご"
+topics = ["イギリス、ブリストル生活"]
 
 +++
 
@@ -30,10 +30,10 @@ topics = ["英国ブリストル生活"]
 
 {{% fluid_img "/img/post/lunch_at_the_famous_royal_navy_volunteer.jpg" %}}
 
-仕事後にも御用達の [The Famous Royal Navy Volunteer](http://navyvolunteer.co.uk/) で昼食。寒かったので、暖炉の前の席が取れてよかった。どれを選んでいいのか戸惑うくらい、ビールやエールの種類が豊富。金曜日の夜にはライブ演奏もあって楽しめます。今日の昼時は、プレミアリーグの生放送 (Tottenham Hotspur vs Arsenal) で白熱していました。
+仕事後にも御用達の [The Famous Royal Navy Volunteer](http://navyvolunteer.co.uk/) で昼食。寒かったので、暖炉の前の席が取れてよかった。どれを選んでいいのか戸惑うくらい、ビールやエールの種類が豊富。金曜日の夜にはライブ演奏もあって楽しめます。今日の昼時は、プレミアリーグの生放送 (Tottenham Hotspur vs Arsenal) で盛り上がっていました。
 
 ところで、写真の Pints West には、リアルエール、ブリストル周辺のパブ、ビアフェスティバルなどに関する情報が満載。[オンライン](http://www.camrabristol.org.uk/pintswest.html)でも読むことができます。
 
 {{% fluid_img "/img/post/queen_square_bristol.jpg" %}}
 
-[クイーンスクエア](https://en.wikipedia.org/wiki/Queen_Square,_Bristol) はすぐ裏手に。食後の散歩がてら、ぐるりとどうぞ。
+[クイーンスクエア](https://en.wikipedia.org/wiki/Queen_Square,_Bristol)はすぐ裏手に。食後の散歩がてら、ぐるりとどうぞ。
