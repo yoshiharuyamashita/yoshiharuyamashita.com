@@ -4,7 +4,7 @@ Blackburn is a clear and responsive theme for [Hugo](//gohugo.io).
 
 ## Overview
 
-* Based on Yahoo's [Pure CSS] (http://purecss.io/)
+* Based on Yahoo's [Pure CSS] (http://purecss.io/) (v0.6.0)
 * Fixed sidebar with social links:
   * Twitter
   * Facebook
@@ -20,13 +20,14 @@ Blackburn is a clear and responsive theme for [Hugo](//gohugo.io).
   * LinkedIn
   * Xing
   * Reddit
+  * Hacker News
   * GitHub
   * Bitbucket
   * Stack Overflow
-* Client-side syntax highlighting by [Highlight.js](//highlightjs.org)
+* Client-side syntax highlighting by [Highlight.js](//highlightjs.org) (v9.1.0)
 * Web analytics by Google Analytics
 * Comments by Disqus
-* Icons by Font Awesome
+* Icons by Font Awesome (v4.5.0)
 
 ## Demo
 
@@ -107,13 +108,13 @@ paginate = 10
 [social]
   # Link your social networking accouns to the side menu
   # by entering your username or ID.
-  
+
   # SNS microblogging
   twitter = "*"
   facebook = "*"
   googleplus = "*"
   weibo = "*"
-  
+
   # SNS photo/video sharing
   instagram = "*"
   flickr = "*"
@@ -122,14 +123,15 @@ paginate = 10
   vimeo = "*"
   vine = "*"
   slideshare = "*"
-  
+
   # SNS career oriented
   linkedin = "*"
   xing = "*"
-  
+
   # SNS news
   reddit = "*"
-  
+  hackernews = "*"
+
   # Techie
   github = "yoshiharuyamashita"
   bitbucket = "*"
@@ -149,6 +151,24 @@ paginate = 10
   identifier = "about"
   url = "/about/"
 ```
+
+## Shortcodes
+
+### Positional
+
+```
+{{% fluid_img "/path/to/img" %}}
+```
+
+### Named
+
+```
+{{% fluid_img class="pure-u-1-2" src="/path/to/img" alt="img description" %}}
+{{% fluid_img class="pure-u-1-3" src="/path/to/img" caption="img description" %}}
+```
+
+* `class`, `alt` and `caption` are optional.
+* See [Pure CSS Grids](http://purecss.io/grids/) for possible `class` values.
 
 ## License
 
