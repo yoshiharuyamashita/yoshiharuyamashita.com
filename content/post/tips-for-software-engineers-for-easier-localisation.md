@@ -8,13 +8,11 @@ topics = ["Software Localisation"]
 
 +++
 
-Here is a list of tips I recently came up with while carrying out an English to Japanese localisation task. To put it simply the tips are things I wished the software engineers had considered in order to make the translator's job easier. 
+Here is a list of tips I recently came up with while carrying out an English to Japanese software localisation task. To put it simply the tips are things I wished the software engineers had considered in order to make the translator's job easier.
 
 <!--more-->
 
 ## 1. Agree a message format, including tenses and punctuations
-
-Example:
 
 ```cpp
 "X found: %1%. X required: %2%."
@@ -27,17 +25,30 @@ These varying message formats are more or less conveying the same meaning to the
 
 ## 2. Provide context information where it would be helpful to the translator
 
-Example:
-
 ```cpp
 "Found %1% references."
 ```
 
 Without knowing the type of information the format specifier carries, for example, whether it is a number, it is possible to translate the sentence incorrectly. At least this is the case with Japanese localisation.
 
-## 3. Hide unnecessary details from the translator
+## 3. Include verbs
 
-Examples:
+```cpp
+"No %1%"
+"Up to %1% files"
+```
+
+What could possibly have happened to that `%1%`? Maybe it has been found or perhaps deleted?
+
+A poor translator with no access to the source code would have no choice but to guess or else come back to you for clarification.
+
+## 4. Make entire sentences translatable using format string
+
+Before you send strings to the translator, you will have to prepare them for localisation. For example using [boost::locale::translate()](http://www.boost.org/doc/libs/1_56_0/libs/locale/doc/html/messages_formatting.html). 
+
+To make this process as efficient as possible, it is best to aim for as little string concatenation as possible when coding. Even if you make each segment of the message translatable, it will be very difficult to translate it correctly due to lack of context. This problem can be addressed by making entire sentences translatable using format strings instead.
+
+## 5. Hide unnecessary details from the translator
 
 ```cpp
 " This is an example."
@@ -47,12 +58,11 @@ Examples:
 
 In the first and second examples, it is all to easy to delete the space at the beginning or forget to add the last new line character. In the final example, the series of format specifiers does not need translating so why show it making the whole sentence look unnecessary complicated? More importantly if it were modified in error, your software would probably throw a bad format specifier exception. The bit after the colon can be built into a string prior to the message. That way the sentence simply becomes "Yet another example: %s%.", which is much preferable for the translator.  Hiding unnecessary details will make it less likely for translators to accidentally modify them.
 
-## 4. Include the order in format specifiers
-
-Example:
+## 6. Include the order in format specifiers
 
 ```cpp
-"page %d of %d"
+"page %d of %d" // error-prone
+"page %1$d of %2$d" // good
 ```
 
 There is no guarantee that the order of all format specifiers will be the same in another language. Correct translation becomes impossible if all format specifiers do not carry the order information with them. Even if the string contains only one format specifier it is better to include the order in case someone adds more at a later date.
