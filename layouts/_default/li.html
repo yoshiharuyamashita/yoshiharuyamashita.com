@@ -1,6 +1,12 @@
-<div class="pure-u-3-4">
-  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+<div class="pure-u-1-24">
+  &bull;
 </div>
-<div class="pure-u-1-4">
+<div class="pure-u-16-24">
+  <a href="{{ .Permalink }}">{{ .Title }}</a>
+</div>
+<div class="pure-u-2-24">
+  &nbsp;
+</div>
+<div class="pure-u-5-24">
   <time>{{ with .Site.Params.dateFormat }}{{ $.Date.Format . }}{{ else }}{{ .Date.Format "02 Jan 2006, 15:04" }}{{ end }}</time>
 </div>
