@@ -2,9 +2,9 @@
 date = "2016-03-28T06:34:36+01:00"
 description = ""
 draft = false
-tags = ["Music"]
+tags = ["turntable", "vinyl", "hobby"]
 title = "First Turntable System"
-topics = ["turntable", "vinyl", "hobby"]
+topics = ["Music"]
 
 +++
 
