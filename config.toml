@@ -5,7 +5,7 @@ theme = "blackburn"
 author = "Yoshiharu Yamashita"
 copyright = "&copy; 2016. All rights reserved."
 canonifyurls = true
-paginate = 10
+paginate = 5
 
 [indexes]
   tag = "tags"
