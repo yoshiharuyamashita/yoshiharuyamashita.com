@@ -32,4 +32,4 @@ Bristol Temple Meads 駅を出て右手側すぐなので、見逃すことは�
 
 ### 公式ウェブサイト
 
-『[Bespoked - The UK Handmade Bicycle Show](http://www.bespoked.cc/index.html)』
+[Bespoked - The UK Handmade Bicycle Show](http://www.bespoked.cc/index.html)

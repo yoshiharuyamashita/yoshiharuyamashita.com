@@ -2,7 +2,7 @@
 date = "2016-04-16T09:08:14+01:00"
 description = ""
 draft = false
-tags = ["vinyl"]
+tags = ["weekend", "event", "vinyl", "record store day"]
 title = "Checking out Rise Bristol on Record Store Day 2016"
 topics = ["Music"]
 
@@ -16,7 +16,8 @@ On an unseasonably chilly mid-April morning, my missus and I went to [Rise](http
 
 I read somewhere that some vinyl fans would start queuing up really early.
 
-As we are not that dedicated (yet), we got there at about 11am and guess what? There was a long queue. The record section is upstairs and there were staff controlling access to the floor above. Live music was performed at the ground floor where the cafe ([Friska](http://www.friskafood.com/)) is.  This should have made the queuing up less boring.  
+As we are not that dedicated (yet), we got there at about 11am and guess what? There was a long queue. The record section is upstairs and there were staff controlling access to the floor above. Live music was performed at the ground floor where the cafe ([Friska](http://www.friskafood.com/)) is.  This should have made the queuing up less boring.
+
 However the queue was not moving much. Feeling peckish we decided to come back after having lunch. As we left the store, one of the exclusive vinyl releases in the shop window caught my eye. It was **Moseley Shoals - Ocean Colour Scene**.
 
 This would be the one I would buy had I the choice.
