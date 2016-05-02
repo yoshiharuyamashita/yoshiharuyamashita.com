@@ -4,7 +4,7 @@ description = "春分の日の日曜日"
 draft = false
 tags = ["イギリス", "ブリストル", "ブリストル観光", "ブリストルのレストラン", "週末"]
 title = "ブリストルの Souk Kitchen (Southville 店) で地中海料理を堪能"
-topics = ["イギリス、ブリストル生活"]
+topics = ["イギリス生活"]
 
 +++
 

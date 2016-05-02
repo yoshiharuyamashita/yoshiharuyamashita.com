@@ -4,7 +4,7 @@ description = ""
 draft = false
 tags = ["作文"]
 title = "名前の威力"
-topics = ["イギリス、ブリストル生活"]
+topics = ["イギリス生活"]
 
 +++
 

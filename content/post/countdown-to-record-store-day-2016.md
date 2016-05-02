@@ -4,7 +4,7 @@ description = "今年もイギリス各地で開催"
 draft = false
 tags = ["イギリス", "ブリストル", "週末", "音楽", "イベント", "レコード", "レコードフェア"]
 title = "Record Store Day までカウントダウン"
-topics = ["イギリス、ブリストル生活"]
+topics = ["イギリス生活"]
 
 +++
 
