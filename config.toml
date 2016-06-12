@@ -53,6 +53,12 @@ paginate = 5
     weight = 4
     identifier = "tag"
     url = "/tags/"
+  [[menu.main]]
+    name = "Contact"
+    pre = "<i class='fa fa-phone-square fa-fw'></i>"
+    weight = 5
+    identifier = "contact"
+    url = "/contact/"
 
 [social]
   # Link your social networking accouns to the side menu
