@@ -19,26 +19,22 @@ I am currently living and working in Bristol, UK.
 
 ### Software Engineer
 
-That's my main job. I currently work on software tools to automatically check and correct video/audio problems in file-based media. In my role, I mainly code in C++ but I often get to use C#, JavaScript and Python as well, which I like.
+I work on software applications to automatically check and correct video/audio problems in file-based media. In my role, I code mainly in C++ but I often use C#, JavaScript and Python as well.
 
 ### Freelance Translator
 
-I also carry out English to Japanese translations and proofreading for computer related areas, including
-
-- GUIs
-- Technical user guides, website contents
-- Voice over for video tutorials
-
-It's good to combine my language skills with computing.
+I also carry out English to Japanese translations and proofreading for computer related areas. My experience includes translations/proofreading of GUIs, technical user guides and website contents to name but a few. I have also done Japanese voice over for video tutorials on PlayStation development tools.
 
 ### Wannabe Freestyle Footballer
 
-I keep a football in my office and practice at lunch time. My current favourite place to practice is the alley at the back of my office off which there are several pubs. The surface is uneven and made of cobbles but I like it there because it's very quiet at lunch time.
+I keep a football in my office and practice at lunch time. My current favourite place to practice is the alley at the back of my office off which there are several pubs. The surface is uneven and made of cobbles but I like it there because it is very quiet at lunch time.
 
 ## About this site
 
+This is where I post articles and thoughts on anything that springs to mind.
+
 - Generated using [Hugo](//gohugo.io), a fast and modern static website engine
 - Hosted from my GitHub [repository](//github.com/yoshiharuyamashita/yoshiharuyamashita.com)
-- Theme is based on Yahoo's Pure CSS layout [here](//purecss.io/layouts/side-menu/) (I've modified it so that it can be used with Hugo)
+- Theme is based on Yahoo's Pure CSS layout [here](//purecss.io/layouts/side-menu/) (I have modified it so that it can be used with Hugo)
 - Icons are from [Font Awesome](//fontawesome.io/)
-- Fonts from [Google Fonts](//www.google.com/fonts)
+- Fonts are from [Google Fonts](//www.google.com/fonts)
