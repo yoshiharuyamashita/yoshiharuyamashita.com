@@ -38,3 +38,6 @@ This is where I post articles and thoughts on anything that springs to mind.
 - Theme is based on Yahoo's Pure CSS layout [here](//purecss.io/layouts/side-menu/) (I have modified it so that it can be used with Hugo)
 - Icons are from [Font Awesome](//fontawesome.io/)
 - Fonts are from [Google Fonts](//www.google.com/fonts)
+- Domain by [Namecheap](https://www.namecheap.com/?aff=102239)
+
+<!-- BEGIN LINK --><a href="https:&#x2F;&#x2F;www.namecheap.com&#x2F;?aff=102239"><img src="http:&#x2F;&#x2F;files.namecheap.com&#x2F;graphics&#x2F;linkus&#x2F;728x90-1.gif" width="728" height="90" border="0" alt="Namecheap.com"></a><!-- END LINK -->
