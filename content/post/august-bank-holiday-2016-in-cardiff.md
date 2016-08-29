@@ -25,7 +25,7 @@ topics = ["イギリス生活"]
 
 {{% fluid_img class="pure-u-1-1" src="/img/post/cardiff-bute-park-2.jpg" alt="Bute Park" %}}
 
-沢山の種類の樹木が植えられています。街のど真ん中にこれほど広大な公園がありのは素晴らしい！癒されるなぁ～。
+沢山の種類の樹木が植えられています。街のど真ん中にこれほど広大な公園があるのは素晴らしい！癒されるなぁ～。
 
 {{% fluid_img class="pure-u-1-1" src="/img/post/cardiff-bute-park-3.jpg" alt="Bute Park" %}}
 
