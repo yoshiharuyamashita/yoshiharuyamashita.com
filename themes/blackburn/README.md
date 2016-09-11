@@ -83,6 +83,8 @@ paginate = 10
   # CSS name for highlight.js
   highlightjs = "androidstudio"
   dateFormat = "02 Jan 2006, 15:04"
+  # Include any custom CSS and/or JS files
+  # (relative to /static folder)
   custom_css = ["css/my.css"]
   custom_js = ["js/my.js"]
 
@@ -113,7 +115,7 @@ paginate = 10
     url = "/contact/"
 
 [social]
-  # Link your social networking accouns to the side menu
+  # Link your social networking accounts to the side menu
   # by entering your username or ID.
 
   # SNS microblogging
@@ -168,6 +170,20 @@ paginate = 10
   weight = 2
   identifier = "about"
   url = "/about/"
+```
+
+* Override the theme by linking to custom CSS files:
+
+```toml
+[params]
+  custom_css = ["css/my.css"]
+```
+
+* Add new behaviours by linking to custom JS files:
+
+```toml
+[params]
+  custom_js = ["js/my.js"]
 ```
 
 ## Shortcodes
