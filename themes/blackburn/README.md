@@ -11,6 +11,7 @@ Blackburn is a clear and responsive theme for [Hugo](//gohugo.io).
   * Facebook
   * Google+
   * Weibo
+  * Tumblr
   * Instagram
   * Flickr
   * Pinterest
@@ -28,6 +29,7 @@ Blackburn is a clear and responsive theme for [Hugo](//gohugo.io).
   * Server Fault
   * Steam
   * Last.fm
+  * Discogs
   * Keybase
 * Client-side syntax highlighting by [Highlight.js](//highlightjs.org) (v9.1.0)
 * Web analytics by Google Analytics
@@ -124,6 +126,7 @@ paginate = 10
   facebook = "*"
   googleplus = "*"
   weibo = "*"
+  tumblr = "*"
 
   # SNS photo/video sharing
   instagram = "*"
@@ -153,6 +156,7 @@ paginate = 10
 
   # Music
   lastfm = "*"
+  discogs = "*"
 
   # Other
   keybase = "*"
