@@ -28,6 +28,7 @@ Blackburn is a clear and responsive theme for [Hugo](//gohugo.io).
   * Stack Overflow
   * Server Fault
   * Steam
+  * MobyGames
   * Last.fm
   * Discogs
   * Keybase
@@ -43,7 +44,7 @@ Blackburn is a clear and responsive theme for [Hugo](//gohugo.io).
 
 ## Screenshots
 
-![screenshot](/images/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/yoshiharuyamashita/blackburn/master/images/screenshot.png)
 
 ## Installation
 
@@ -64,7 +65,7 @@ See [Hugo Quickstart Guide](//gohugo.io/overview/quickstart/) for more informati
 Example config.toml:
 
 ```toml
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+baseurl = "https://www.example.com/"
 title = "Your site title"
 author = "Your name"
 # Shown in the side menu
@@ -153,6 +154,7 @@ paginate = 10
 
   # Gaming
   steam = "*"
+  mobygames = "*"
 
   # Music
   lastfm = "*"

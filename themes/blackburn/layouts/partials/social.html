@@ -1,9 +1,9 @@
 <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    {{ if .RSSlink }}
+    {{ if .RSSLink }}
     <li class="pure-menu-item">
-      <a class="pure-menu-link" href="{{ .RSSlink }}"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      <a class="pure-menu-link" href="{{ .RSSLink }}"><i class="fa fa-rss fa-fw"></i>RSS</a>
     </li>
     {{ end }}
 
@@ -148,6 +148,12 @@
     {{ with .Site.Social.steam }}
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://steamcommunity.com/id/{{ . }}" target="_blank"><i class="fa fa-steam-square fa-fw"></i>Steam</a>
+    </li>
+    {{ end }}
+
+    {{ with .Site.Social.mobygames }}
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://www.mobygames.com/developer/sheet/view/developerId,{{ . }}" target="_blank"><i class="fa fa-gamepad fa-fw"></i>MobyGames</a>
     </li>
     {{ end }}
 
