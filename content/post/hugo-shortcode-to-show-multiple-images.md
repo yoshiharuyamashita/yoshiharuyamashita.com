@@ -24,7 +24,7 @@ My original `fluid_img` shortcode is limited in that it can only display one ima
 
 ### Code
 
-It is not part of my [Blackburn theme](https://github.com/yoshiharuyamashita/blackburn) yet but I will add it once I am happy with it.
+~~It is not part of my [Blackburn theme](https://github.com/yoshiharuyamashita/blackburn) yet but I will add it once I am happy with it.~~
 
 ```html
 {{ $paramCount := len .Params }}
