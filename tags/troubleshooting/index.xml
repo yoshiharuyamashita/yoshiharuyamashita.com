@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Troubleshooting on Yoshiharu Yamashita</title>
+    <link>http://yoshiharuyamashita.com/tags/troubleshooting/</link>
+    <description>Recent content in Troubleshooting on Yoshiharu Yamashita</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 02 Feb 2016 22:00:02 +0000</lastBuildDate>
+    <atom:link href="http://yoshiharuyamashita.com/tags/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Stop 0x0000007B Error on Booting Windows 7</title>
+      <link>http://yoshiharuyamashita.com/post/stop-0x0000007b-error-on-booting-windows7/</link>
+      <pubDate>Tue, 02 Feb 2016 22:00:02 +0000</pubDate>
+      
+      <guid>http://yoshiharuyamashita.com/post/stop-0x0000007b-error-on-booting-windows7/</guid>
+      <description>
+
+&lt;h2 id=&#34;upgrading-from-windows-7-to-windows-10:4fe587e16c23fc48b1540abbc2047f65&#34;&gt;Upgrading from Windows 7 to Windows 10&lt;/h2&gt;
+
+&lt;p&gt;It was Monday morning. I attempted to upgrade my work PC to Windows 10. My colleagues were able to upgrade to Windows 10 very easily so I thought it&amp;rsquo;d be a piece of cake.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately it wasn&amp;rsquo;t an easy and smooth process for me and took a few hours to complete.&lt;/p&gt;
+
+&lt;p&gt;The upgrade failed with the following error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;We couldn&#39;t update the system reserved partition.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This error appeared to be common and I found a few possible things to try to fix it.&lt;/p&gt;
+
+&lt;p&gt;I followed the instructions from this &lt;a href=&#34;//blogs.msdn.microsoft.com/buckh/2015/08/10/fix-windows-10-upgrade-couldnt-update-the-system-reserved-partition/&#34;&gt;blog post&lt;/a&gt;. My system reserved partition was 100 MB and full like the author of the blog.&lt;/p&gt;
+
+&lt;h2 id=&#34;steps:4fe587e16c23fc48b1540abbc2047f65&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Install &lt;a href=&#34;//www.minitool.com/partition-manager/partition-wizard-home.html&#34;&gt;MiniTool Partition Wizard Free Edition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reduce the OS partion by 200 MB&lt;/li&gt;
+&lt;li&gt;Increase the system reserved partition by 200 MB&lt;/li&gt;
+&lt;li&gt;Hit Apply and restart my PC&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;results:4fe587e16c23fc48b1540abbc2047f65&#34;&gt;Results&lt;/h2&gt;
+
+&lt;p&gt;After step 4, I was met with the following blue screen&amp;hellip;&lt;/p&gt;
+
+
+&lt;img class=&#34;pure-img&#34; src=&#34;http://yoshiharuyamashita.com/img/post/stop-0x0000007b-error.jpg&#34; alt=&#34;&#34;&gt;
+
+
+&lt;pre&gt;&lt;code&gt;*** STOP: 0x0000007B (0xFFFFF880009A97E8, 0xFFFFFFFFC0000034, 0x000000000000, 0x000000000000)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;0x0000007B corresponds to &lt;strong&gt;INACCESSIBLE_BOOT_DEVICE&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;At this point, I wasn&amp;rsquo;t able to boot my PC in safe mode at all.&lt;/p&gt;
+
+&lt;p&gt;Startup Repair couldn&amp;rsquo;t do anything either. I couldn&amp;rsquo;t blame it because it found no OS so didn&amp;rsquo;t know what to repair!&lt;/p&gt;
+
+&lt;h2 id=&#34;fix-which-worked-for-me:4fe587e16c23fc48b1540abbc2047f65&#34;&gt;Fix (which worked for me)&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Boot from Windows recovery disk&lt;/li&gt;
+&lt;li&gt;System Recovery Options -&amp;gt; Command Prompt&lt;/li&gt;
+&lt;li&gt;Run the following command (x is the drive letter where Windows is installed):&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;chkdsk x: /r
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Wait, wait and wait&lt;/li&gt;
+&lt;li&gt;Restart and hope for the best&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And this did the trick for me :)&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m now on Windows 10 and so far so good!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Automated Deployments using Wercker</title>
+      <link>http://yoshiharuyamashita.com/post/automated-deployments-using-wercker/</link>
+      <pubDate>Sun, 31 Jan 2016 17:42:03 +0000</pubDate>
+      
+      <guid>http://yoshiharuyamashita.com/post/automated-deployments-using-wercker/</guid>
+      <description>
+
+&lt;h2 id=&#34;hugo-github-wercker:e8282c967ca77513b956e3ab09a9f6ed&#34;&gt;Hugo + GitHub + Wercker&lt;/h2&gt;
+
+&lt;p&gt;This website is hosted from my GitHub repository. Every time I commit changes to that repository, the website is built and deployed automatically with &lt;a href=&#34;//wercker.com/&#34;&gt;Wercker&lt;/a&gt;. This is great as it means I can concentrate on writing!&lt;/p&gt;
+
+&lt;p&gt;If you want to achieve the same workflow, you should follow this excellent &lt;a href=&#34;//gohugo.io/tutorials/automated-deployments/&#34;&gt;tutorial&lt;/a&gt; from the official Hugo site.&lt;/p&gt;
+
+&lt;h2 id=&#34;but-something-went-wrong:e8282c967ca77513b956e3ab09a9f6ed&#34;&gt;But Something Went Wrong&lt;/h2&gt;
+
+&lt;p&gt;Everything was working as expected for a few weeks until one day I recevied a deploy error from Wercker. After that all my commits ended up with the same error, which meant that I couldn&amp;rsquo;t update my website.&lt;/p&gt;
+
+&lt;p&gt;The error was as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;export WERCKER_STEP_ROOT=&amp;quot;/pipeline/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3&amp;quot;
+export WERCKER_STEP_ID=&amp;quot;install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3&amp;quot;
+export WERCKER_STEP_OWNER=&amp;quot;wercker&amp;quot;
+export WERCKER_STEP_NAME=&amp;quot;install-packages&amp;quot;
+export WERCKER_REPORT_NUMBERS_FILE=&amp;quot;/report/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3/numbers.ini&amp;quot;
+export WERCKER_REPORT_MESSAGE_FILE=&amp;quot;/report/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3/message.txt&amp;quot;
+export WERCKER_REPORT_ARTIFACTS_DIR=&amp;quot;/report/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3/artifacts&amp;quot;
+export WERCKER_INSTALL_PACKAGES_PACKAGES=&amp;quot;git ssh-client&amp;quot;
+source &amp;quot;/pipeline/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3/run.sh&amp;quot; &amp;lt; /dev/null
+Reading package lists...
+Building dependency tree...
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ git : Depends: liberror-perl but it is not going to be installed
+E: Unable to correct problems, you have held broken packages.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;My wercker.yml settings:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+        version: &amp;quot;0.15&amp;quot;
+        theme: blackburn
+        flags: --buildDrafts=true
+deploy:
+  steps:
+    - install-packages:
+        packages: git ssh-client
+    - lukevivier/gh-pages@0.2.1:
+        token: $GIT_TOKEN
+        domain: yoshiharuyamashita.com
+        basedir: public
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Googling for a solution, I found out the error was something to do with bad package dependencies but being a Wercker newbie I was still unsure how to fix it.&lt;/p&gt;
+
+&lt;h2 id=&#34;solution:e8282c967ca77513b956e3ab09a9f6ed&#34;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;I was able to fix this problem by clearing &lt;strong&gt;$WERCKER_CACHE_DIR&lt;/strong&gt;. In Wercker it&amp;rsquo;s under &lt;strong&gt;Application Settings&lt;/strong&gt; -&amp;gt; &lt;strong&gt;Options&lt;/strong&gt; as shown below:&lt;/p&gt;
+
+
+&lt;img class=&#34;pure-img&#34; src=&#34;http://yoshiharuyamashita.com/img/post/wercker-clear-cache.png&#34; alt=&#34;&#34;&gt;
+
+
+&lt;p&gt;I hope this helps!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software Localisation Tips on Yoshiharu Yamashita</title>
+    <link>http://yoshiharuyamashita.com/tags/software-localisation-tips/</link>
+    <description>Recent content in Software Localisation Tips on Yoshiharu Yamashita</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 27 Feb 2016 15:49:25 +0000</lastBuildDate>
+    <atom:link href="http://yoshiharuyamashita.com/tags/software-localisation-tips/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tips for Software Engineers for Easier Localisation</title>
+      <link>http://yoshiharuyamashita.com/post/tips-for-software-engineers-for-easier-localisation/</link>
+      <pubDate>Sat, 27 Feb 2016 15:49:25 +0000</pubDate>
+      
+      <guid>http://yoshiharuyamashita.com/post/tips-for-software-engineers-for-easier-localisation/</guid>
+      <description>
+
+&lt;p&gt;Here is a list of tips I recently came up with while carrying out an English to Japanese software localisation task. To put it simply the tips are things I wished the software engineers had considered in order to make the translator&amp;rsquo;s job easier.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-agree-a-message-format-including-tenses-and-punctuations:b79c2e60002a0a63ee15cce8547d4f8a&#34;&gt;1. Agree a message format, including tenses and punctuations&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;&amp;quot;X found: %1%. X required: %2%.&amp;quot;
+&amp;quot;Actual X: %1%. Required X: %2%.&amp;quot;
+&amp;quot;X should have been %1% but found %2%&amp;quot;
+&amp;quot;X is %1% (it must be %2%)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;These varying message formats are more or less conveying the same meaning to the user. It would be better to agree on a format within the development team and use it for the same type of messages. This would help to make the software look more consistent to the user. The number of strings to be sent to the translator would also be reduced.  It is not always possible or practical to make these kind of changes at later development stages so this is best done early.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-provide-context-information-where-it-would-be-helpful-to-the-translator:b79c2e60002a0a63ee15cce8547d4f8a&#34;&gt;2. Provide context information where it would be helpful to the translator&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;&amp;quot;Found %1% references.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Without knowing the type of information the format specifier carries, for example, whether it is a number, it is possible to translate the sentence incorrectly. At least this is the case with Japanese localisation.&lt;/p&gt;
+
+&lt;h2 id=&#34;3-include-verbs:b79c2e60002a0a63ee15cce8547d4f8a&#34;&gt;3. Include verbs&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;&amp;quot;No %1%&amp;quot;
+&amp;quot;Up to %1% files&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What could possibly have happened to that &lt;code&gt;%1%&lt;/code&gt;? Maybe it has been found or perhaps deleted?&lt;/p&gt;
+
+&lt;p&gt;A poor translator with no access to the source code would have no choice but to guess or else come back to you for clarification.&lt;/p&gt;
+
+&lt;h2 id=&#34;4-make-entire-sentences-translatable-using-format-string:b79c2e60002a0a63ee15cce8547d4f8a&#34;&gt;4. Make entire sentences translatable using format string&lt;/h2&gt;
+
+&lt;p&gt;Before you send strings to the translator, you will have to prepare them for localisation. For example using &lt;a href=&#34;http://www.boost.org/doc/libs/1_56_0/libs/locale/doc/html/messages_formatting.html&#34;&gt;boost::locale::translate()&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To make this process as efficient as possible, it is best to aim for as little string concatenation as possible when coding. Even if you make each segment of the message translatable, it will be very difficult to translate it correctly due to lack of context. This problem can be addressed by making entire sentences translatable using format strings instead.&lt;/p&gt;
+
+&lt;h2 id=&#34;5-hide-unnecessary-details-from-the-translator:b79c2e60002a0a63ee15cce8547d4f8a&#34;&gt;5. Hide unnecessary details from the translator&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;&amp;quot; This is an example.&amp;quot;
+&amp;quot;This is another example.\n&amp;quot;
+&amp;quot;Yet another example: %1$d%2% %3$.f%4%.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the first and second examples, it is all to easy to delete the space at the beginning or forget to add the last new line character. In the final example, the series of format specifiers does not need translating so why show it making the whole sentence look unnecessary complicated? More importantly if it were modified in error, your software would probably throw a bad format specifier exception. The bit after the colon can be built into a string prior to the message. That way the sentence simply becomes &amp;ldquo;Yet another example: %s%.&amp;ldquo;, which is much preferable for the translator.  Hiding unnecessary details will make it less likely for translators to accidentally modify them.&lt;/p&gt;
+
+&lt;h2 id=&#34;6-include-the-order-in-format-specifiers:b79c2e60002a0a63ee15cce8547d4f8a&#34;&gt;6. Include the order in format specifiers&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;&amp;quot;page %d of %d&amp;quot; // error-prone
+&amp;quot;page %1$d of %2$d&amp;quot; // good
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There is no guarantee that the order of all format specifiers will be the same in another language. Correct translation becomes impossible if all format specifiers do not carry the order information with them. Even if the string contains only one format specifier it is better to include the order in case someone adds more at a later date.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion:b79c2e60002a0a63ee15cce8547d4f8a&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Software localisation can be time-consuming and costly. It is also an on-going process. As long as changes are being made to the software, further localisation is required.&lt;/p&gt;
+
+&lt;p&gt;Making it possible for translators to translate strings easily and correctly is beneficial not only for translators but for development teams. The speedy delivery of correctly translated files is vital to the software development process.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

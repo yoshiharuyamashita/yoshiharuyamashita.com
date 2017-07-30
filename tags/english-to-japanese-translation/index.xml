@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>English To Japanese Translation on Yoshiharu Yamashita</title>
+    <link>http://yoshiharuyamashita.com/tags/english-to-japanese-translation/</link>
+    <description>Recent content in English To Japanese Translation on Yoshiharu Yamashita</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 21 Feb 2016 20:03:07 +0000</lastBuildDate>
+    <atom:link href="http://yoshiharuyamashita.com/tags/english-to-japanese-translation/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Subtle English to Japanese Translation Errors</title>
+      <link>http://yoshiharuyamashita.com/post/subtle-english-to-japanese-translation-errors/</link>
+      <pubDate>Sun, 21 Feb 2016 20:03:07 +0000</pubDate>
+      
+      <guid>http://yoshiharuyamashita.com/post/subtle-english-to-japanese-translation-errors/</guid>
+      <description>&lt;p&gt;Words enclosed with &amp;quot; &amp;quot; and &amp;#39; &amp;#39; are typically translated into 『 』 and 「 」 respectively in Japanese.&lt;/p&gt;
+
+&lt;p&gt;While localising software into Japanese recently, I came across the following string:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot; and &amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Whatever translation tool you are using might automatically translate it into something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;『 および 』
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That is understandable.&lt;/p&gt;
+
+&lt;p&gt;Even though it looks grammatically correct, I don&amp;rsquo;t know where such a translation would be useful.&lt;/p&gt;
+
+&lt;p&gt;Referring back to the source file where the string came from, it was clear that the correct translation was:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;』および『
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you were given the string alone, it would be quite easy to translate it incorrectly.&lt;/p&gt;
+
+&lt;p&gt;It shows that correctly bundling content with its context as one unit would reduce potential translation errors.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

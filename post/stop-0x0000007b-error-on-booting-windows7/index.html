@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.15" />
+
+  <title>Stop 0x0000007B Error on Booting Windows 7 &middot; Yoshiharu Yamashita</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://yoshiharuyamashita.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="http://yoshiharuyamashita.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="http://yoshiharuyamashita.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="http://yoshiharuyamashita.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  <a class="pure-menu-heading brand" href="http://yoshiharuyamashita.com/">
+  <img src="http://yoshiharuyamashita.com/img/logo.png" width="35px">
+</a>
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://yoshiharuyamashita.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://yoshiharuyamashita.com/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://yoshiharuyamashita.com/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://yoshiharuyamashita.com/topics/"><i class='fa fa-folder fa-fw'></i>Topics</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://yoshiharuyamashita.com/tags/"><i class='fa fa-tags fa-fw'></i>Tags</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://yoshiharuyamashita.com/contact/"><i class='fa fa-phone-square fa-fw'></i>Contact</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/yoshiforshort" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://instagram.com/yoshiforshort" target="_blank"><i class="fa fa-instagram fa-fw"></i>Instagram</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yoshiharuyamashita" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://www.discogs.com/user/yoshiforshort" target="_blank"><i class="fa fa-music fa-fw"></i>Discogs</a>
+    </li>
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2016. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Stop 0x0000007B Error on Booting Windows 7</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Feb 2016</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="http://yoshiharuyamashita.com/topics/techy-stuff">Techy Stuff</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://yoshiharuyamashita.com/tags/windows-10-upgrade">windows 10 upgrade</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://yoshiharuyamashita.com/tags/troubleshooting">troubleshooting</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  
+
+<h2 id="upgrading-from-windows-7-to-windows-10:4fe587e16c23fc48b1540abbc2047f65">Upgrading from Windows 7 to Windows 10</h2>
+
+<p>It was Monday morning. I attempted to upgrade my work PC to Windows 10. My colleagues were able to upgrade to Windows 10 very easily so I thought it&rsquo;d be a piece of cake.</p>
+
+<p>Unfortunately it wasn&rsquo;t an easy and smooth process for me and took a few hours to complete.</p>
+
+<p>The upgrade failed with the following error:</p>
+
+<pre><code>We couldn't update the system reserved partition.
+</code></pre>
+
+<p>This error appeared to be common and I found a few possible things to try to fix it.</p>
+
+<p>I followed the instructions from this <a href="//blogs.msdn.microsoft.com/buckh/2015/08/10/fix-windows-10-upgrade-couldnt-update-the-system-reserved-partition/">blog post</a>. My system reserved partition was 100 MB and full like the author of the blog.</p>
+
+<h2 id="steps:4fe587e16c23fc48b1540abbc2047f65">Steps</h2>
+
+<ol>
+<li>Install <a href="//www.minitool.com/partition-manager/partition-wizard-home.html">MiniTool Partition Wizard Free Edition</a></li>
+<li>Reduce the OS partion by 200 MB</li>
+<li>Increase the system reserved partition by 200 MB</li>
+<li>Hit Apply and restart my PC</li>
+</ol>
+
+<h2 id="results:4fe587e16c23fc48b1540abbc2047f65">Results</h2>
+
+<p>After step 4, I was met with the following blue screen&hellip;</p>
+
+
+<img class="pure-img" src="http://yoshiharuyamashita.com/img/post/stop-0x0000007b-error.jpg" alt="">
+
+
+<pre><code>*** STOP: 0x0000007B (0xFFFFF880009A97E8, 0xFFFFFFFFC0000034, 0x000000000000, 0x000000000000)
+</code></pre>
+
+<p>0x0000007B corresponds to <strong>INACCESSIBLE_BOOT_DEVICE</strong>.</p>
+
+<p>At this point, I wasn&rsquo;t able to boot my PC in safe mode at all.</p>
+
+<p>Startup Repair couldn&rsquo;t do anything either. I couldn&rsquo;t blame it because it found no OS so didn&rsquo;t know what to repair!</p>
+
+<h2 id="fix-which-worked-for-me:4fe587e16c23fc48b1540abbc2047f65">Fix (which worked for me)</h2>
+
+<ol>
+<li>Boot from Windows recovery disk</li>
+<li>System Recovery Options -&gt; Command Prompt</li>
+<li>Run the following command (x is the drive letter where Windows is installed):</li>
+</ol>
+
+<pre><code>chkdsk x: /r
+</code></pre>
+
+<ol>
+<li>Wait, wait and wait</li>
+<li>Restart and hope for the best</li>
+</ol>
+
+<p>And this did the trick for me :)</p>
+
+<p>I&rsquo;m now on Windows 10 and so far so good!</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="http://yoshiharuyamashita.com/post/automated-deployments-using-wercker/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="http://yoshiharuyamashita.com/post/automated-deployments-using-wercker/">Automated Deployments using Wercker</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="http://yoshiharuyamashita.com/post/great-freestyle-football-app/">使える！フリースタイルフットボール練習用アプリ</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="http://yoshiharuyamashita.com/post/great-freestyle-football-app/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'yoshiharuyamashita';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="http://yoshiharuyamashita.com/js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72514969-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
+

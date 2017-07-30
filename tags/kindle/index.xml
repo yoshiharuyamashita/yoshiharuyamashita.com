@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kindle on Yoshiharu Yamashita</title>
+    <link>http://yoshiharuyamashita.com/tags/kindle/</link>
+    <description>Recent content in Kindle on Yoshiharu Yamashita</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 29 May 2016 09:46:40 +0100</lastBuildDate>
+    <atom:link href="http://yoshiharuyamashita.com/tags/kindle/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>イギリスで日本語の本を手軽に買って読む方法</title>
+      <link>http://yoshiharuyamashita.com/post/how-to-download-japanese-books-on-uk-kindle/</link>
+      <pubDate>Sun, 29 May 2016 09:46:40 +0100</pubDate>
+      
+      <guid>http://yoshiharuyamashita.com/post/how-to-download-japanese-books-on-uk-kindle/</guid>
+      <description>
+
+&lt;p&gt;当たり前と言えば当たり前ですが、イギリスでは日本語で書かれた本を購入しづらいです。&lt;/p&gt;
+
+&lt;p&gt;ロンドンには日本語の本を専門に扱う本屋さんが複数ありますが、僕の知る限りでは品揃えはイマイチです。せっかく行ったのに探していた本がなかった、なんてことが過去に何度かありました。取り寄せ注文しても届くまでに時間がかかるし、価格も高めに設定されています。&lt;/p&gt;
+
+&lt;h3 id=&#34;kindle-app:8e26e45146539245d400fe98a911da37&#34;&gt;Kindle App&lt;/h3&gt;
+
+&lt;p&gt;amazon.co.jp で本を購入後すぐにイギリスで読むことができたらいいなぁと思い Kindle App を試してみるも、日本のアマゾンで購入ボタンをクリックした後に毎回エラーが発生しうまくいきませんでした。&lt;/p&gt;
+
+&lt;p&gt;そのエラーは確か「amazon.co.uk で購入してください」といった内容だったと思います。インターネットで検索しても解決法が見つからず、もうあきらめようかなと思った時にやっと成功しました。&lt;/p&gt;
+
+&lt;p&gt;この記事ではその方法を簡単に説明します。&lt;/p&gt;
+
+&lt;h3 id=&#34;必要なもの:8e26e45146539245d400fe98a911da37&#34;&gt;必要なもの&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Kindle App が起動する末端 (以前は iPad Air と Kindle App という組み合わせで読んでいましたが、読んでいて目と腕が疲れるので、現在は Kindle Voyage を愛用中)&lt;/li&gt;
+&lt;li&gt;クレジットカード (僕はイギリスで発行されたクレジットカードを使用)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;手順:8e26e45146539245d400fe98a911da37&#34;&gt;手順&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;amazon.co.jp でアカウントを作成 (僕は amazon.co.uk のアカウントも持っていますが、ともに異なる E メールアドレスで登録してあります)。&lt;/li&gt;
+&lt;li&gt;「アカウントサービス」 &amp;gt; 「コンテンツと端末の管理」 &amp;gt; 「設定」 &amp;gt; 「居住国設定」にて&lt;strong&gt;「お住いの国」が「日本」に設定&lt;/strong&gt;されていることを確認。ここが肝心です。上記のエラーの原因はここにありました。この項目が「イギリス」に設定されている場合、amazon.co.jp で Kindle 本を購入・ダウンロードすることができないようです。&lt;/li&gt;
+&lt;li&gt;クレジットカード情報および請求先住所を入力するときは、イギリスのクレジットカードとイギリスでの現住所をそれぞれ使用。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;1 つ設定を変更しただけで購入できるようになるなんて拍子抜けしますが、こうして日本語の Kindle 本を読むことが可能になりました。&lt;/p&gt;
+
+&lt;h3 id=&#34;念のため:8e26e45146539245d400fe98a911da37&#34;&gt;念のため&lt;/h3&gt;
+
+&lt;p&gt;実際に本を買う前に、使っている端末に無料の Kindle 本 (例えば、夏目漱石の「&lt;a href=&#34;https://www.amazon.co.jp/%E3%81%93%E3%81%93%E3%82%8D-%E5%A4%8F%E7%9B%AE-%E6%BC%B1%E7%9F%B3-ebook/dp/B009IXKPVY/ref=sr_1_1?ie=UTF8&amp;amp;qid=1465629787&amp;amp;sr=8-1&amp;amp;keywords=%E3%81%93%E3%81%93%E3%82%8D&#34;&gt;こころ&lt;/a&gt;」) をダウンロードして、まずそれを読むことができるかどうか確認するのが無難だと思います。&lt;/p&gt;
+
+&lt;h3 id=&#34;最後に:8e26e45146539245d400fe98a911da37&#34;&gt;最後に&lt;/h3&gt;
+
+&lt;p&gt;上記の方法で日本語の小説を日本のアマゾンで数冊購入しダウンロードしました。これからもこの方法が通用するという保証はありませんが、そんなことは今は気にせず、読書を楽しんでいます。&lt;/p&gt;
+
+&lt;p&gt;実際にページをめくることはできませんが、同じタイトルを本屋で買うより安上がりだし、何といっても手軽に購入してすぐさま読書開始できるのはとてもありがたいです。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

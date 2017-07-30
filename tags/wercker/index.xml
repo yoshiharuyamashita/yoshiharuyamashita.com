@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wercker on Yoshiharu Yamashita</title>
+    <link>http://yoshiharuyamashita.com/tags/wercker/</link>
+    <description>Recent content in Wercker on Yoshiharu Yamashita</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 31 Jan 2016 17:42:03 +0000</lastBuildDate>
+    <atom:link href="http://yoshiharuyamashita.com/tags/wercker/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Automated Deployments using Wercker</title>
+      <link>http://yoshiharuyamashita.com/post/automated-deployments-using-wercker/</link>
+      <pubDate>Sun, 31 Jan 2016 17:42:03 +0000</pubDate>
+      
+      <guid>http://yoshiharuyamashita.com/post/automated-deployments-using-wercker/</guid>
+      <description>
+
+&lt;h2 id=&#34;hugo-github-wercker:e8282c967ca77513b956e3ab09a9f6ed&#34;&gt;Hugo + GitHub + Wercker&lt;/h2&gt;
+
+&lt;p&gt;This website is hosted from my GitHub repository. Every time I commit changes to that repository, the website is built and deployed automatically with &lt;a href=&#34;//wercker.com/&#34;&gt;Wercker&lt;/a&gt;. This is great as it means I can concentrate on writing!&lt;/p&gt;
+
+&lt;p&gt;If you want to achieve the same workflow, you should follow this excellent &lt;a href=&#34;//gohugo.io/tutorials/automated-deployments/&#34;&gt;tutorial&lt;/a&gt; from the official Hugo site.&lt;/p&gt;
+
+&lt;h2 id=&#34;but-something-went-wrong:e8282c967ca77513b956e3ab09a9f6ed&#34;&gt;But Something Went Wrong&lt;/h2&gt;
+
+&lt;p&gt;Everything was working as expected for a few weeks until one day I recevied a deploy error from Wercker. After that all my commits ended up with the same error, which meant that I couldn&amp;rsquo;t update my website.&lt;/p&gt;
+
+&lt;p&gt;The error was as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;export WERCKER_STEP_ROOT=&amp;quot;/pipeline/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3&amp;quot;
+export WERCKER_STEP_ID=&amp;quot;install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3&amp;quot;
+export WERCKER_STEP_OWNER=&amp;quot;wercker&amp;quot;
+export WERCKER_STEP_NAME=&amp;quot;install-packages&amp;quot;
+export WERCKER_REPORT_NUMBERS_FILE=&amp;quot;/report/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3/numbers.ini&amp;quot;
+export WERCKER_REPORT_MESSAGE_FILE=&amp;quot;/report/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3/message.txt&amp;quot;
+export WERCKER_REPORT_ARTIFACTS_DIR=&amp;quot;/report/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3/artifacts&amp;quot;
+export WERCKER_INSTALL_PACKAGES_PACKAGES=&amp;quot;git ssh-client&amp;quot;
+source &amp;quot;/pipeline/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3/run.sh&amp;quot; &amp;lt; /dev/null
+Reading package lists...
+Building dependency tree...
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ git : Depends: liberror-perl but it is not going to be installed
+E: Unable to correct problems, you have held broken packages.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;My wercker.yml settings:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+        version: &amp;quot;0.15&amp;quot;
+        theme: blackburn
+        flags: --buildDrafts=true
+deploy:
+  steps:
+    - install-packages:
+        packages: git ssh-client
+    - lukevivier/gh-pages@0.2.1:
+        token: $GIT_TOKEN
+        domain: yoshiharuyamashita.com
+        basedir: public
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Googling for a solution, I found out the error was something to do with bad package dependencies but being a Wercker newbie I was still unsure how to fix it.&lt;/p&gt;
+
+&lt;h2 id=&#34;solution:e8282c967ca77513b956e3ab09a9f6ed&#34;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;I was able to fix this problem by clearing &lt;strong&gt;$WERCKER_CACHE_DIR&lt;/strong&gt;. In Wercker it&amp;rsquo;s under &lt;strong&gt;Application Settings&lt;/strong&gt; -&amp;gt; &lt;strong&gt;Options&lt;/strong&gt; as shown below:&lt;/p&gt;
+
+
+&lt;img class=&#34;pure-img&#34; src=&#34;http://yoshiharuyamashita.com/img/post/wercker-clear-cache.png&#34; alt=&#34;&#34;&gt;
+
+
+&lt;p&gt;I hope this helps!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

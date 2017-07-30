@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rant on Yoshiharu Yamashita</title>
+    <link>http://yoshiharuyamashita.com/topics/rant/</link>
+    <description>Recent content in Rant on Yoshiharu Yamashita</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 23 Apr 2016 21:31:52 +0100</lastBuildDate>
+    <atom:link href="http://yoshiharuyamashita.com/topics/rant/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Problem Contacting Amazon by Email</title>
+      <link>http://yoshiharuyamashita.com/post/problem-contacting-amazon-by-email/</link>
+      <pubDate>Sat, 23 Apr 2016 21:31:52 +0100</pubDate>
+      
+      <guid>http://yoshiharuyamashita.com/post/problem-contacting-amazon-by-email/</guid>
+      <description>
+
+&lt;p&gt;Over the last few days, I spent some time trying to find out how to read Japanese Kindle books on my UK iPad.&lt;/p&gt;
+
+&lt;p&gt;In the end, I could not find the information I was looking for so I contacted Amazon.co.uk from the following URL:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.uk/gp/help/contact-us/general-questions.html?skip=true#a&#34;&gt;amazon.co.uk&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I filled in the form provided and hit &amp;ldquo;Send E-mail&amp;rdquo;, to which it responded:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;WE&amp;rsquo;RE SORRY. THERE WAS AN ERROR TRYING TO SEND YOUR E-MAIL. PLEASE TRY AGAIN IN A FEW MINUTES OR CONTACT US BY PHONE.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You can see the message in the following screenshot:&lt;/p&gt;
+
+
+&lt;div class=&#34;pure-u-1-1&#34;&gt;
+  &lt;img class=&#34;pure-img&#34; src=&#34;http://yoshiharuyamashita.com/img/post/contacting-amazon-by-email.png&#34; alt=&#34;Contacting Amazon by Email&#34;&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;It did not take long until I realised that I &lt;strong&gt;also had to fill in the &amp;ldquo;From&amp;rdquo; field&lt;/strong&gt;, which is not marked as required. The message does not help the user (well, apart from the &amp;ldquo;OR CONTACT US BY PHONE&amp;rdquo; bit perhaps).&lt;/p&gt;
+
+&lt;p&gt;If I submit without providing &amp;ldquo;Your e-mail address&amp;rdquo;, the page displays:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Please enter your e-mail address.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Without &amp;ldquo;Enter additional information&amp;rdquo;, it complains:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Please enter comments.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Both messages tell the user what to do.&lt;/p&gt;
+
+&lt;h3 id=&#34;how-about-amazon-com-and-amazon-co-jp:65b512be262eeba5e5941b52479426b5&#34;&gt;How About Amazon.com and Amazon.co.jp?&lt;/h3&gt;
+
+&lt;p&gt;Being a software engineer, I could not help but digging this issue a bit deeper.&lt;/p&gt;
+
+&lt;p&gt;So I tried the same steps on these Amazon sites:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.com/gp/help/contact-us/general-questions.html?skip=true#a&#34;&gt;amazon.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;WE&amp;rsquo;RE SORRY. THERE WAS AN ERROR TRYING TO SEND YOUR E-MAIL. PLEASE TRY AGAIN IN A FEW MINUTES OR CONTACT US BY PHONE.&lt;/strong&gt; (same as amazon.co.uk)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/help/customer/contact-us?skip=true#a&#34;&gt;amazon.co.jp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;申し訳ありません。Eメールの送信中にエラーが発生しました。数分後にもう一度送信していただくか、電話でお問い合わせください。&lt;/strong&gt;, which is a Japanese translation of the above.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;These results are not so interesting but at least consistent among the three sites.&lt;/p&gt;
+
+&lt;h3 id=&#34;end-of-rant:65b512be262eeba5e5941b52479426b5&#34;&gt;End of Rant&lt;/h3&gt;
+
+&lt;p&gt;It is a minor issue but I was not expecting this kind of validation error from the e-commerce giant.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

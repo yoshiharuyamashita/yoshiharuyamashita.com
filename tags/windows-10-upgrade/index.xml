@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows 10 Upgrade on Yoshiharu Yamashita</title>
+    <link>http://yoshiharuyamashita.com/tags/windows-10-upgrade/</link>
+    <description>Recent content in Windows 10 Upgrade on Yoshiharu Yamashita</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 02 Feb 2016 22:00:02 +0000</lastBuildDate>
+    <atom:link href="http://yoshiharuyamashita.com/tags/windows-10-upgrade/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Stop 0x0000007B Error on Booting Windows 7</title>
+      <link>http://yoshiharuyamashita.com/post/stop-0x0000007b-error-on-booting-windows7/</link>
+      <pubDate>Tue, 02 Feb 2016 22:00:02 +0000</pubDate>
+      
+      <guid>http://yoshiharuyamashita.com/post/stop-0x0000007b-error-on-booting-windows7/</guid>
+      <description>
+
+&lt;h2 id=&#34;upgrading-from-windows-7-to-windows-10:4fe587e16c23fc48b1540abbc2047f65&#34;&gt;Upgrading from Windows 7 to Windows 10&lt;/h2&gt;
+
+&lt;p&gt;It was Monday morning. I attempted to upgrade my work PC to Windows 10. My colleagues were able to upgrade to Windows 10 very easily so I thought it&amp;rsquo;d be a piece of cake.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately it wasn&amp;rsquo;t an easy and smooth process for me and took a few hours to complete.&lt;/p&gt;
+
+&lt;p&gt;The upgrade failed with the following error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;We couldn&#39;t update the system reserved partition.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This error appeared to be common and I found a few possible things to try to fix it.&lt;/p&gt;
+
+&lt;p&gt;I followed the instructions from this &lt;a href=&#34;//blogs.msdn.microsoft.com/buckh/2015/08/10/fix-windows-10-upgrade-couldnt-update-the-system-reserved-partition/&#34;&gt;blog post&lt;/a&gt;. My system reserved partition was 100 MB and full like the author of the blog.&lt;/p&gt;
+
+&lt;h2 id=&#34;steps:4fe587e16c23fc48b1540abbc2047f65&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Install &lt;a href=&#34;//www.minitool.com/partition-manager/partition-wizard-home.html&#34;&gt;MiniTool Partition Wizard Free Edition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reduce the OS partion by 200 MB&lt;/li&gt;
+&lt;li&gt;Increase the system reserved partition by 200 MB&lt;/li&gt;
+&lt;li&gt;Hit Apply and restart my PC&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;results:4fe587e16c23fc48b1540abbc2047f65&#34;&gt;Results&lt;/h2&gt;
+
+&lt;p&gt;After step 4, I was met with the following blue screen&amp;hellip;&lt;/p&gt;
+
+
+&lt;img class=&#34;pure-img&#34; src=&#34;http://yoshiharuyamashita.com/img/post/stop-0x0000007b-error.jpg&#34; alt=&#34;&#34;&gt;
+
+
+&lt;pre&gt;&lt;code&gt;*** STOP: 0x0000007B (0xFFFFF880009A97E8, 0xFFFFFFFFC0000034, 0x000000000000, 0x000000000000)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;0x0000007B corresponds to &lt;strong&gt;INACCESSIBLE_BOOT_DEVICE&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;At this point, I wasn&amp;rsquo;t able to boot my PC in safe mode at all.&lt;/p&gt;
+
+&lt;p&gt;Startup Repair couldn&amp;rsquo;t do anything either. I couldn&amp;rsquo;t blame it because it found no OS so didn&amp;rsquo;t know what to repair!&lt;/p&gt;
+
+&lt;h2 id=&#34;fix-which-worked-for-me:4fe587e16c23fc48b1540abbc2047f65&#34;&gt;Fix (which worked for me)&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Boot from Windows recovery disk&lt;/li&gt;
+&lt;li&gt;System Recovery Options -&amp;gt; Command Prompt&lt;/li&gt;
+&lt;li&gt;Run the following command (x is the drive letter where Windows is installed):&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;chkdsk x: /r
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Wait, wait and wait&lt;/li&gt;
+&lt;li&gt;Restart and hope for the best&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And this did the trick for me :)&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m now on Windows 10 and so far so good!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

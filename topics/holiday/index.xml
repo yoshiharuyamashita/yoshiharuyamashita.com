@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Holiday on Yoshiharu Yamashita</title>
+    <link>http://yoshiharuyamashita.com/topics/holiday/</link>
+    <description>Recent content in Holiday on Yoshiharu Yamashita</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 09 May 2016 07:49:40 +0100</lastBuildDate>
+    <atom:link href="http://yoshiharuyamashita.com/topics/holiday/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Trip to Halkidiki Greece May 2016</title>
+      <link>http://yoshiharuyamashita.com/post/trip-to-halkidiki-greece-may-2016/</link>
+      <pubDate>Mon, 09 May 2016 07:49:40 +0100</pubDate>
+      
+      <guid>http://yoshiharuyamashita.com/post/trip-to-halkidiki-greece-may-2016/</guid>
+      <description>&lt;p&gt;To be written.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>City Break in Lisbon Portugal May 2016</title>
+      <link>http://yoshiharuyamashita.com/post/city-break-in-lisbon-portugal-may-2016/</link>
+      <pubDate>Mon, 09 May 2016 07:49:29 +0100</pubDate>
+      
+      <guid>http://yoshiharuyamashita.com/post/city-break-in-lisbon-portugal-may-2016/</guid>
+      <description>&lt;p&gt;To be written.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

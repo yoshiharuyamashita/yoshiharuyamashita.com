@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.15" />
+
+  <title>Automated Deployments using Wercker &middot; Yoshiharu Yamashita</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://yoshiharuyamashita.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="http://yoshiharuyamashita.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="http://yoshiharuyamashita.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="http://yoshiharuyamashita.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  <a class="pure-menu-heading brand" href="http://yoshiharuyamashita.com/">
+  <img src="http://yoshiharuyamashita.com/img/logo.png" width="35px">
+</a>
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://yoshiharuyamashita.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://yoshiharuyamashita.com/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://yoshiharuyamashita.com/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://yoshiharuyamashita.com/topics/"><i class='fa fa-folder fa-fw'></i>Topics</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://yoshiharuyamashita.com/tags/"><i class='fa fa-tags fa-fw'></i>Tags</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://yoshiharuyamashita.com/contact/"><i class='fa fa-phone-square fa-fw'></i>Contact</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/yoshiforshort" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://instagram.com/yoshiforshort" target="_blank"><i class="fa fa-instagram fa-fw"></i>Instagram</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yoshiharuyamashita" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://www.discogs.com/user/yoshiforshort" target="_blank"><i class="fa fa-music fa-fw"></i>Discogs</a>
+    </li>
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2016. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Automated Deployments using Wercker</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>31 Jan 2016</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="http://yoshiharuyamashita.com/topics/techy-stuff">Techy Stuff</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://yoshiharuyamashita.com/tags/hugo">hugo</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://yoshiharuyamashita.com/tags/wercker">wercker</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://yoshiharuyamashita.com/tags/troubleshooting">troubleshooting</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  
+
+<h2 id="hugo-github-wercker:e8282c967ca77513b956e3ab09a9f6ed">Hugo + GitHub + Wercker</h2>
+
+<p>This website is hosted from my GitHub repository. Every time I commit changes to that repository, the website is built and deployed automatically with <a href="//wercker.com/">Wercker</a>. This is great as it means I can concentrate on writing!</p>
+
+<p>If you want to achieve the same workflow, you should follow this excellent <a href="//gohugo.io/tutorials/automated-deployments/">tutorial</a> from the official Hugo site.</p>
+
+<h2 id="but-something-went-wrong:e8282c967ca77513b956e3ab09a9f6ed">But Something Went Wrong</h2>
+
+<p>Everything was working as expected for a few weeks until one day I recevied a deploy error from Wercker. After that all my commits ended up with the same error, which meant that I couldn&rsquo;t update my website.</p>
+
+<p>The error was as follows:</p>
+
+<pre><code>export WERCKER_STEP_ROOT=&quot;/pipeline/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3&quot;
+export WERCKER_STEP_ID=&quot;install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3&quot;
+export WERCKER_STEP_OWNER=&quot;wercker&quot;
+export WERCKER_STEP_NAME=&quot;install-packages&quot;
+export WERCKER_REPORT_NUMBERS_FILE=&quot;/report/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3/numbers.ini&quot;
+export WERCKER_REPORT_MESSAGE_FILE=&quot;/report/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3/message.txt&quot;
+export WERCKER_REPORT_ARTIFACTS_DIR=&quot;/report/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3/artifacts&quot;
+export WERCKER_INSTALL_PACKAGES_PACKAGES=&quot;git ssh-client&quot;
+source &quot;/pipeline/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3/run.sh&quot; &lt; /dev/null
+Reading package lists...
+Building dependency tree...
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ git : Depends: liberror-perl but it is not going to be installed
+E: Unable to correct problems, you have held broken packages.
+</code></pre>
+
+<p>My wercker.yml settings:</p>
+
+<pre><code>box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+        version: &quot;0.15&quot;
+        theme: blackburn
+        flags: --buildDrafts=true
+deploy:
+  steps:
+    - install-packages:
+        packages: git ssh-client
+    - lukevivier/gh-pages@0.2.1:
+        token: $GIT_TOKEN
+        domain: yoshiharuyamashita.com
+        basedir: public
+</code></pre>
+
+<p>Googling for a solution, I found out the error was something to do with bad package dependencies but being a Wercker newbie I was still unsure how to fix it.</p>
+
+<h2 id="solution:e8282c967ca77513b956e3ab09a9f6ed">Solution</h2>
+
+<p>I was able to fix this problem by clearing <strong>$WERCKER_CACHE_DIR</strong>. In Wercker it&rsquo;s under <strong>Application Settings</strong> -&gt; <strong>Options</strong> as shown below:</p>
+
+
+<img class="pure-img" src="http://yoshiharuyamashita.com/img/post/wercker-clear-cache.png" alt="">
+
+
+<p>I hope this helps!</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="http://yoshiharuyamashita.com/post/introducing-blackburn-hugo-theme/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="http://yoshiharuyamashita.com/post/introducing-blackburn-hugo-theme/">Introducing Blackburn</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="http://yoshiharuyamashita.com/post/stop-0x0000007b-error-on-booting-windows7/">Stop 0x0000007B Error on Booting Windows 7</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="http://yoshiharuyamashita.com/post/stop-0x0000007b-error-on-booting-windows7/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'yoshiharuyamashita';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="http://yoshiharuyamashita.com/js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72514969-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
+

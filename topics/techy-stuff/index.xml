@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Techy Stuff on Yoshiharu Yamashita</title>
+    <link>http://yoshiharuyamashita.com/topics/techy-stuff/</link>
+    <description>Recent content in Techy Stuff on Yoshiharu Yamashita</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 25 Sep 2016 14:15:30 +0100</lastBuildDate>
+    <atom:link href="http://yoshiharuyamashita.com/topics/techy-stuff/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hugo Shortcode to Show Multiple Images</title>
+      <link>http://yoshiharuyamashita.com/post/hugo-shortcode-to-show-multiple-images/</link>
+      <pubDate>Sun, 25 Sep 2016 14:15:30 +0100</pubDate>
+      
+      <guid>http://yoshiharuyamashita.com/post/hugo-shortcode-to-show-multiple-images/</guid>
+      <description>
+
+&lt;p&gt;I have created a new Hugo &lt;a href=&#34;https://gohugo.io/extras/shortcodes/&#34;&gt;shortcode&lt;/a&gt; (&lt;code&gt;fluid_imgs&lt;/code&gt;) that makes it easy to display multiple images in your content files, for example:&lt;/p&gt;
+
+
+
+&lt;div class=&#34;pure-g&#34;&gt;
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-3&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-3&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-3&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+&lt;/div&gt;
+
+
+&lt;h3 id=&#34;background:e51f7363b17085a60023a4e623962fc8&#34;&gt;Background&lt;/h3&gt;
+
+&lt;p&gt;My original &lt;code&gt;fluid_img&lt;/code&gt; shortcode is limited in that it can only display one image at a time. This means you have to repeat the same shortcode to display more than one image, which is rather inconvenient. &lt;code&gt;fluid_imgs&lt;/code&gt; improves this.&lt;/p&gt;
+
+&lt;h3 id=&#34;code:e51f7363b17085a60023a4e623962fc8&#34;&gt;Code&lt;/h3&gt;
+
+&lt;p&gt;&lt;del&gt;It is not part of my &lt;a href=&#34;https://github.com/yoshiharuyamashita/blackburn&#34;&gt;Blackburn theme&lt;/a&gt; yet but I will add it once I am happy with it.&lt;/del&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;{{ $paramCount := len .Params }}
+{{ if gt $paramCount 0 }}
+&amp;lt;div class=&amp;quot;pure-g&amp;quot;&amp;gt;
+{{ range $param := .Params }}
+  {{ $items := split $param &amp;quot;|&amp;quot; }}
+  {{ $itemCount := len $items }}
+  &amp;lt;!-- Item count must be at least 2 as
+  &amp;quot;class&amp;quot; and &amp;quot;src&amp;quot; must be specified --&amp;gt;
+  {{ if ge $itemCount 2 }}
+  &amp;lt;div class=&amp;quot;{{ index $items 0 }}&amp;quot;&amp;gt;
+    &amp;lt;div style=&amp;quot;padding: 0 .2em&amp;quot;&amp;gt;
+      &amp;lt;img
+        class=&amp;quot;pure-img-responsive&amp;quot;
+        src=&amp;quot;{{ index $items 1 }}&amp;quot;
+        alt=&amp;quot;{{ if ge $itemCount 3 }}{{ index $items 2 }}{{ else }}{{ &amp;quot;&amp;quot; }}{{ end }}&amp;quot;&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+  {{ end }}
+{{ end }}
+&amp;lt;/div&amp;gt;
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;usage:e51f7363b17085a60023a4e623962fc8&#34;&gt;Usage&lt;/h3&gt;
+
+&lt;p&gt;The content of the shortcode in your markup file is very simple:&lt;/p&gt;
+
+&lt;p&gt;{{&amp;lt; fluid_imgs&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;  &amp;quot;class|src|alt&amp;quot;
+  &amp;quot;class|src|alt&amp;quot;
+  &amp;quot;... and so on&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;gt;}}&lt;/p&gt;
+
+&lt;p&gt;where each positional parameter is separated by the vertical bar (i.e., |).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: specifies a Pure CSS unit class name (&lt;strong&gt;required&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;src&lt;/code&gt;: specifies the URL of an image (&lt;strong&gt;required&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;alt&lt;/code&gt;: specifies an alternate text for an image (optional)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;The shortcode uses positional parameters so the order is important. The first two parameters must be specified in that order. Also see &lt;a href=&#34;http://purecss.io/grids/&#34;&gt;the official Pure CSS site&lt;/a&gt; for valid unit class names.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;example-output:e51f7363b17085a60023a4e623962fc8&#34;&gt;Example output&lt;/h3&gt;
+
+&lt;p&gt;3 Images with &lt;code&gt;pure-u-1-3&lt;/code&gt;:&lt;/p&gt;
+
+
+
+&lt;div class=&#34;pure-g&#34;&gt;
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-3&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-3&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-3&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+&lt;/div&gt;
+
+
+&lt;p&gt;2 Images with &lt;code&gt;pure-u-1-2&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;
+
+&lt;div class=&#34;pure-g&#34;&gt;
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-2&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-2&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;6 Images with &lt;code&gt;pure-u-1-3&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;
+
+&lt;div class=&#34;pure-g&#34;&gt;
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-3&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-3&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-3&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-3&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-3&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-3&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;1 image with &lt;code&gt;pure-u-1-1&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;
+
+&lt;div class=&#34;pure-g&#34;&gt;
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-1&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;known-problems:e51f7363b17085a60023a4e623962fc8&#34;&gt;Known Problems&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;When used with different units, the resulting output is less aesthetically pleasing. In the following example I am using 1 image with &lt;code&gt;pure-u-1-2&lt;/code&gt; and 3 with &lt;code&gt;pure-u-1-6&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+
+&lt;div class=&#34;pure-g&#34;&gt;
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-6&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-2&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-6&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-6&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;http://yoshiharuyamashita.com/img/post/dog.jpg&#34;
+        alt=&#34;Dog&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Including the vertical bar in any parameters will break the shortcode. For example if you specified &lt;code&gt;Apple|Orange|Banana&lt;/code&gt; for &lt;code&gt;alt&lt;/code&gt;, it would be set to &lt;code&gt;Apple&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;to-dos:e51f7363b17085a60023a4e623962fc8&#34;&gt;To Dos&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Experiment to use named parameters instead of positional ones (but bear in mind the latter might be better as it would involve less typing for the user).&lt;/li&gt;
+&lt;li&gt;Allow the user to configure the padding setting, which is currently hard-coded as &lt;code&gt;padding: 0 .2em&lt;/code&gt; within the shortcode.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Stop 0x0000007B Error on Booting Windows 7</title>
+      <link>http://yoshiharuyamashita.com/post/stop-0x0000007b-error-on-booting-windows7/</link>
+      <pubDate>Tue, 02 Feb 2016 22:00:02 +0000</pubDate>
+      
+      <guid>http://yoshiharuyamashita.com/post/stop-0x0000007b-error-on-booting-windows7/</guid>
+      <description>
+
+&lt;h2 id=&#34;upgrading-from-windows-7-to-windows-10:4fe587e16c23fc48b1540abbc2047f65&#34;&gt;Upgrading from Windows 7 to Windows 10&lt;/h2&gt;
+
+&lt;p&gt;It was Monday morning. I attempted to upgrade my work PC to Windows 10. My colleagues were able to upgrade to Windows 10 very easily so I thought it&amp;rsquo;d be a piece of cake.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately it wasn&amp;rsquo;t an easy and smooth process for me and took a few hours to complete.&lt;/p&gt;
+
+&lt;p&gt;The upgrade failed with the following error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;We couldn&#39;t update the system reserved partition.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This error appeared to be common and I found a few possible things to try to fix it.&lt;/p&gt;
+
+&lt;p&gt;I followed the instructions from this &lt;a href=&#34;//blogs.msdn.microsoft.com/buckh/2015/08/10/fix-windows-10-upgrade-couldnt-update-the-system-reserved-partition/&#34;&gt;blog post&lt;/a&gt;. My system reserved partition was 100 MB and full like the author of the blog.&lt;/p&gt;
+
+&lt;h2 id=&#34;steps:4fe587e16c23fc48b1540abbc2047f65&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Install &lt;a href=&#34;//www.minitool.com/partition-manager/partition-wizard-home.html&#34;&gt;MiniTool Partition Wizard Free Edition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reduce the OS partion by 200 MB&lt;/li&gt;
+&lt;li&gt;Increase the system reserved partition by 200 MB&lt;/li&gt;
+&lt;li&gt;Hit Apply and restart my PC&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;results:4fe587e16c23fc48b1540abbc2047f65&#34;&gt;Results&lt;/h2&gt;
+
+&lt;p&gt;After step 4, I was met with the following blue screen&amp;hellip;&lt;/p&gt;
+
+
+&lt;img class=&#34;pure-img&#34; src=&#34;http://yoshiharuyamashita.com/img/post/stop-0x0000007b-error.jpg&#34; alt=&#34;&#34;&gt;
+
+
+&lt;pre&gt;&lt;code&gt;*** STOP: 0x0000007B (0xFFFFF880009A97E8, 0xFFFFFFFFC0000034, 0x000000000000, 0x000000000000)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;0x0000007B corresponds to &lt;strong&gt;INACCESSIBLE_BOOT_DEVICE&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;At this point, I wasn&amp;rsquo;t able to boot my PC in safe mode at all.&lt;/p&gt;
+
+&lt;p&gt;Startup Repair couldn&amp;rsquo;t do anything either. I couldn&amp;rsquo;t blame it because it found no OS so didn&amp;rsquo;t know what to repair!&lt;/p&gt;
+
+&lt;h2 id=&#34;fix-which-worked-for-me:4fe587e16c23fc48b1540abbc2047f65&#34;&gt;Fix (which worked for me)&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Boot from Windows recovery disk&lt;/li&gt;
+&lt;li&gt;System Recovery Options -&amp;gt; Command Prompt&lt;/li&gt;
+&lt;li&gt;Run the following command (x is the drive letter where Windows is installed):&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;chkdsk x: /r
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Wait, wait and wait&lt;/li&gt;
+&lt;li&gt;Restart and hope for the best&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And this did the trick for me :)&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m now on Windows 10 and so far so good!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Automated Deployments using Wercker</title>
+      <link>http://yoshiharuyamashita.com/post/automated-deployments-using-wercker/</link>
+      <pubDate>Sun, 31 Jan 2016 17:42:03 +0000</pubDate>
+      
+      <guid>http://yoshiharuyamashita.com/post/automated-deployments-using-wercker/</guid>
+      <description>
+
+&lt;h2 id=&#34;hugo-github-wercker:e8282c967ca77513b956e3ab09a9f6ed&#34;&gt;Hugo + GitHub + Wercker&lt;/h2&gt;
+
+&lt;p&gt;This website is hosted from my GitHub repository. Every time I commit changes to that repository, the website is built and deployed automatically with &lt;a href=&#34;//wercker.com/&#34;&gt;Wercker&lt;/a&gt;. This is great as it means I can concentrate on writing!&lt;/p&gt;
+
+&lt;p&gt;If you want to achieve the same workflow, you should follow this excellent &lt;a href=&#34;//gohugo.io/tutorials/automated-deployments/&#34;&gt;tutorial&lt;/a&gt; from the official Hugo site.&lt;/p&gt;
+
+&lt;h2 id=&#34;but-something-went-wrong:e8282c967ca77513b956e3ab09a9f6ed&#34;&gt;But Something Went Wrong&lt;/h2&gt;
+
+&lt;p&gt;Everything was working as expected for a few weeks until one day I recevied a deploy error from Wercker. After that all my commits ended up with the same error, which meant that I couldn&amp;rsquo;t update my website.&lt;/p&gt;
+
+&lt;p&gt;The error was as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;export WERCKER_STEP_ROOT=&amp;quot;/pipeline/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3&amp;quot;
+export WERCKER_STEP_ID=&amp;quot;install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3&amp;quot;
+export WERCKER_STEP_OWNER=&amp;quot;wercker&amp;quot;
+export WERCKER_STEP_NAME=&amp;quot;install-packages&amp;quot;
+export WERCKER_REPORT_NUMBERS_FILE=&amp;quot;/report/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3/numbers.ini&amp;quot;
+export WERCKER_REPORT_MESSAGE_FILE=&amp;quot;/report/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3/message.txt&amp;quot;
+export WERCKER_REPORT_ARTIFACTS_DIR=&amp;quot;/report/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3/artifacts&amp;quot;
+export WERCKER_INSTALL_PACKAGES_PACKAGES=&amp;quot;git ssh-client&amp;quot;
+source &amp;quot;/pipeline/install-packages-57eed074-cb0b-4e08-97a0-32cf7ef1f7d3/run.sh&amp;quot; &amp;lt; /dev/null
+Reading package lists...
+Building dependency tree...
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ git : Depends: liberror-perl but it is not going to be installed
+E: Unable to correct problems, you have held broken packages.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;My wercker.yml settings:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+        version: &amp;quot;0.15&amp;quot;
+        theme: blackburn
+        flags: --buildDrafts=true
+deploy:
+  steps:
+    - install-packages:
+        packages: git ssh-client
+    - lukevivier/gh-pages@0.2.1:
+        token: $GIT_TOKEN
+        domain: yoshiharuyamashita.com
+        basedir: public
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Googling for a solution, I found out the error was something to do with bad package dependencies but being a Wercker newbie I was still unsure how to fix it.&lt;/p&gt;
+
+&lt;h2 id=&#34;solution:e8282c967ca77513b956e3ab09a9f6ed&#34;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;I was able to fix this problem by clearing &lt;strong&gt;$WERCKER_CACHE_DIR&lt;/strong&gt;. In Wercker it&amp;rsquo;s under &lt;strong&gt;Application Settings&lt;/strong&gt; -&amp;gt; &lt;strong&gt;Options&lt;/strong&gt; as shown below:&lt;/p&gt;
+
+
+&lt;img class=&#34;pure-img&#34; src=&#34;http://yoshiharuyamashita.com/img/post/wercker-clear-cache.png&#34; alt=&#34;&#34;&gt;
+
+
+&lt;p&gt;I hope this helps!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introducing Blackburn</title>
+      <link>http://yoshiharuyamashita.com/post/introducing-blackburn-hugo-theme/</link>
+      <pubDate>Sat, 23 Jan 2016 22:43:03 +0000</pubDate>
+      
+      <guid>http://yoshiharuyamashita.com/post/introducing-blackburn-hugo-theme/</guid>
+      <description>&lt;p&gt;Hello world!&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve recently been experimenting with &lt;a href=&#34;//gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, which is a static site generator created by &lt;a href=&#34;//github.com/spf13&#34;&gt;spf13&lt;/a&gt;. My experience is still rudimentary but so far it&amp;rsquo;s been fun using it. Hugo makes it really easy to setup, configure and customise a website.&lt;/p&gt;
+
+&lt;p&gt;A BIG thank you to spf13 for creating such a cool project!&lt;/p&gt;
+
+&lt;p&gt;As part of learning Hugo, I&amp;rsquo;ve had a go at creating a theme for it. It&amp;rsquo;s called Blackburn and is available from &lt;a href=&#34;//github.com/yoshiharuyamashita/blackburn&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This serves as my first post.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
